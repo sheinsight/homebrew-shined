@@ -4,7 +4,7 @@
 class Snm < Formula
   desc "snm = corepack + fnm + ni ."
   homepage "https://github.com/sheinsight/snm"
-
+  version "0.0.1-33"
   if Hardware::CPU.intel?
     url "https://github.com/sheinsight/snm/releases/download/v0.0.1-33/snm-macos-x86.zip"
     sha256 "efbf8ca86e46f7d77507358c3432b6e8b61ea89d24601ac81e8f466a9e3feff3"
