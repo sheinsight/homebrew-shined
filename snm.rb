@@ -4,8 +4,16 @@
 class Snm < Formula
   desc "snm = corepack + fnm + ni ."
   homepage "https://github.com/sheinsight/snm"
-  url "https://github.com/sheinsight/snm/releases/download/v0.0.1-33/snm-macos-arm.zip"
-  sha256 "40894a71dd76eee97cbbdf002e2c49f17036f035e487657c67da0d312c85761b"
+
+  if Hardware::CPU.intel?
+    url "https://github.com/sheinsight/snm/releases/download/v0.0.1-33/snm-macos-x86.zip"
+    sha256 "efbf8ca86e46f7d77507358c3432b6e8b61ea89d24601ac81e8f466a9e3feff3"
+  elsif Hardware::CPU.arm?
+    url "https://github.com/sheinsight/snm/releases/download/v0.0.1-33/snm-macos-arm.zip"
+    sha256 "40894a71dd76eee97cbbdf002e2c49f17036f035e487657c67da0d312c85761b"
+  end
+
+
   license "MIT"
 
   # depends_on "cmake" => :build
