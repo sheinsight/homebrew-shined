@@ -4,13 +4,14 @@
 class Snm < Formula
   desc "snm = corepack + fnm + ni ."
   homepage "https://github.com/sheinsight/snm"
-  version "0.0.1-34"
+  version "0.0.1-38"
   if Hardware::CPU.intel?
-    url "https://github.com/sheinsight/snm/releases/download/v0.0.1-34/snm-macos-x86_64.zip"
-    sha256 "a6eb4c3b3ceed2df2d0e4bff124b10293d3cfa2775bd861b7d0a5f3afb39f9e1"
+    
+    url "https://github.com/sheinsight/snm/releases/download/v0.0.1-42/snm-macos-x86_64.zip"
+    sha256 "01fcac7d8fa7591ec285f72703f2ebefd7264fd932694ba3c098bcc3f9cd0bb3"
   elsif Hardware::CPU.arm?
-    url "https://github.com/sheinsight/snm/releases/download/v0.0.1-34/snm-macos-arm.zip"
-    sha256 "ec5ea3c68e86d308826ec02c73107383db9a23ca901487c45fd3b59e9f8bebca"
+    url "https://github.com/sheinsight/snm/releases/download/v0.0.1-42/snm-macos-arm.zip"
+    sha256 "8e1e15e0e8a97a92bf4e124101f6078d3c204ac20bee079e396c9cb469aefa06"
   end
   
 
@@ -23,7 +24,7 @@ class Snm < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    bin.install "snm","pnpx","pnpm","npx","npm","node"
+    bin.install "snm","pnpx","pnpm","npx","npm","yarn","node"
   end
 
   test do
