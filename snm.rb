@@ -1,13 +1,13 @@
 class Snm < Formula
   desc "snm = corepack + fnm + ni ."
   homepage "https://github.com/sheinsight/snm"
-  version "0.0.1-96"
+  version "0.0.1-97"
   if Hardware::CPU.intel?
-    url "https://github.com/sheinsight/snm/releases/download/0.0.1-96/x86_64-apple-darwin.tar.gz"
-    sha256 "2df6647f94471552b774e83cafd77d1045e456633ac1ea0f057b2c4618c67c94"
+    url "https://github.com/sheinsight/snm/releases/download/0.0.1-97/x86_64-apple-darwin.tar.gz"
+    sha256 "46b7298c8ebf20a36f487a0cee721433f10f9544f3209d07a2483d87aebd6129"
   elsif Hardware::CPU.arm?
-    url "https://github.com/sheinsight/snm/releases/download/0.0.1-96/aarch64-apple-darwin.tar.gz"
-    sha256 "4f55bb10361e4d1884fedda9fa5322a673d0fbe8d55d793f93d8dbdcf8542bba"
+    url "https://github.com/sheinsight/snm/releases/download/0.0.1-97/aarch64-apple-darwin.tar.gz"
+    sha256 "dfd62217512504275133c479407a1104783b7204595c42a7dd2292c52189fafb"
   end
   license "MIT"
   def install
